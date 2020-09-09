@@ -2,6 +2,7 @@ body{
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
 }
 
 .notification{
@@ -14,4 +15,12 @@ body{
 
 .notification-text a{
     color: #dc3545;
+}
+.card{
+    border-radius: 15px;
+}
+
+.card-header{
+    height: 120px;
+    background-color: white;
 }
