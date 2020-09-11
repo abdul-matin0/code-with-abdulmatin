@@ -7,12 +7,15 @@
     <!-- bootstrap css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&family=Fredoka+One&display=swap" rel="stylesheet">
     <!-- icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
 </head>
 <body>
 
@@ -35,11 +38,13 @@
     <!-- content section -->
     <div id="accordion">
       <!-- card courses -->
-      <div class="card shadow mb-4">
+      <div class="card shadow mb-4 animated slideInLeft">
         <div class="card-header">
           <a class="card-link" data-toggle="collapse" href="#collapseOne">
             <b class="header-color mt-3 ml-1 ml-sm-3">Courses</b>
             <i class="fas fa-book card-icon mr-3 mr-sm-5 mt-2"></i>
+
+            <p class="mt-4 ml-1 ml-sm-3">View list of available courses</p>
           </a>
         </div>
         <div id="collapseOne" class="collapse show" data-parent="#accordion">
@@ -49,7 +54,7 @@
         </div>
       </div>
       <!-- card pricing -->
-      <div class="card shadow mb-4">
+      <div class="card shadow mb-4 animated slideInRight">
         <div class="card-header">
           <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
             <b class="header-color mt-3 ml-1 ml-sm-3">Pricing</b>
@@ -76,7 +81,7 @@
         </div>
       </div> -->
       <!-- card calendar -->
-      <div class="card shadow mb-4" id="calendar">
+      <div class="card shadow mb-4 animated slideInLeft" id="calendar">
         <div class="card-header">
           <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
             <b class="header-color mt-3 ml-1 ml-sm-3">Calendar</b>
@@ -90,7 +95,7 @@
         </div>
       </div>
       <!-- card contact -->
-      <div class="card shadow mb-4">
+      <div class="card shadow mb-4 animated slideInRight">
         <div class="card-header">
           <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
             <b class="header-color mt-3 ml-1 ml-sm-3">Contact</b>
