@@ -2,7 +2,6 @@ body{
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #f9f9f9;
 }
 
 .notification{
@@ -22,9 +21,21 @@ body{
 
 .card-header{
     height: 170px;
-    background-color: white;
 }
 
 .header-color{
     color: #000;
+    font-size: xx-large;
+    letter-spacing: 1px;
+    margin-top: 50px;
+}
+
+.card-icon{
+    color: #dc3545;
+    float: right;
+    font-size: xx-large;
+}
+
+.footer{
+    border-top: 2px solid #dc3545;
 }
