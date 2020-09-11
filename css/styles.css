@@ -17,6 +17,10 @@ body{
 }
 .card{
     border-radius: 15px;
+    /* animation-delay:3s; */
+    animation-duration: 1s;
+    animation-iteration-count:1;
+      
 }
 
 .card-header{
@@ -24,10 +28,11 @@ body{
 }
 
 .header-color{
-    color: #000;
+    color: #121212;
     font-size: xx-large;
     letter-spacing: 1px;
     margin-top: 50px;
+    font-family: 'Fredoka One', cursive;
 }
 
 .card-icon{
