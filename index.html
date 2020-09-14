@@ -15,6 +15,38 @@
     <!-- icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- js form validation -->
+    <script>
+        function formValidation(){
+          var errors = [];
+
+          var name = document.forms["form-section"]["name"].value;
+          var subject = document.forms["form-section"]["subject"].value;
+          var message = document.forms["form-section"]["message"].value;
+
+          //trim values
+          if(name.trim() == ""){
+            errors.push("Enter your Name ");
+            document.getElementById("error-name").innerHTML = "Name Missing";
+          }
+          if(subject.trim() == ""){
+            errors.push("Enter A Subject ");
+            document.getElementById("error-subject").innerHTML = "Subject Missing";
+          }
+          if(message.trim() == ""){
+            errors.push("Enter a message ");
+            document.getElementById("error-msg").innerHTML = "Message Missing";
+          }
+
+          //if there are errors display error message
+          if(!errors.length == 0){
+
+            // alert(errors);
+            return false;
+          }
+        }
+    </script>
     
 </head>
 <body>
@@ -32,13 +64,13 @@
   <!-- main section -->
   <div class="container ">
     <!-- heading -->
-    <h2 style="font-weight: bold; color: #146396; font-family: 'Fredoka One', cursive;" class="mb-4">Code With Abdul-matin</h2>
+    <h2 style="font-weight: bold; color: #146396; font-family: 'Fredoka One', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" class="mb-4">Code With Abdul-matin</h2>
     <p class="mb-5">Learn From Experts: stuffs content content Learn From Experts: stuffs content content</p>
 
     <!-- content section -->
     <div id="accordion">
       <!-- card courses -->
-      <div class="card shadow mb-4 animated slideInLeft">
+      <div class="card shadow mb-4 animated slideInLeft card-one">
         <div class="card-header">
           <a class="card-link" data-toggle="collapse" href="#collapseOne">
             <b class="header-color mt-3 ml-1 ml-sm-3">Courses</b>
@@ -49,12 +81,44 @@
         </div>
         <div id="collapseOne" class="collapse show" data-parent="#accordion">
           <div class="card-body">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <p>Combine .table-dark and .table-striped to create a dark, striped table:</p>
+            <!-- table course -->            
+              <table class="table table-dark table-striped table-responsive-sm">
+                <thead>
+                  <tr>
+                    <th>Course</th>
+                    <th>Modules</th>
+                    <th>Duration</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Web Design</td>
+                    <td>HTML, CSS, Javascript, Bootstrap Framework</td>
+                    <td>2 Months</td>
+                  </tr>
+                  <tr>
+                    <td>Web Development</td>
+                    <td>Moe</td>
+                    <td>mary@example.com</td>
+                  </tr>
+                  <tr>
+                    <td>Android Development</td>
+                    <td>Dooley</td>
+                    <td>july@example.com</td>
+                  </tr>
+                  <tr>
+                    <td>Java Programming</td>
+                    <td>Dooley</td>
+                    <td>july@example.com</td>
+                  </tr>
+                </tbody>
+              </table>
           </div>
         </div>
       </div>
       <!-- card pricing -->
-      <div class="card shadow mb-4 animated slideInRight">
+      <div class="card card-two shadow mb-4 animated slideInRight">
         <div class="card-header">
           <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
             <b class="header-color mt-3 ml-1 ml-sm-3">Pricing</b>
@@ -67,35 +131,22 @@
           </div>
         </div>
       </div>
-      <!-- card about
-      <div class="card shadow mb-4">
+      <!-- card calendar -->
+      <div class="card card-three shadow mb-4 animated slideInLeft" id="calendar">
         <div class="card-header">
           <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-            <h4 class="header-color mt-3 ml-3">About</h4>
-        </a>
+            <b class="header-color mt-3 ml-1 ml-sm-3">Calendar</b>
+            <i class="fas fa-calendar-alt card-icon mr-3 mr-sm-5 mt-2"></i>
+          </a>
         </div>
         <div id="collapseThree" class="collapse" data-parent="#accordion">
           <div class="card-body">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </div>
         </div>
-      </div> -->
-      <!-- card calendar -->
-      <div class="card shadow mb-4 animated slideInLeft" id="calendar">
-        <div class="card-header">
-          <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
-            <b class="header-color mt-3 ml-1 ml-sm-3">Calendar</b>
-            <i class="fas fa-calendar-alt card-icon mr-3 mr-sm-5 mt-2"></i>
-          </a>
-        </div>
-        <div id="collapseFour" class="collapse" data-parent="#accordion">
-          <div class="card-body">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </div>
-        </div>
       </div>
       <!-- card contact -->
-      <div class="card shadow mb-4 animated slideInRight">
+      <div class="card card-four shadow mb-4 animated slideInRight">
         <div class="card-header">
           <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
             <b class="header-color mt-3 ml-1 ml-sm-3">Contact</b>
@@ -104,20 +155,54 @@
         </div>
         <div id="collapseFour" class="collapse" data-parent="#accordion">
           <div class="card-body">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Send us a message: <br><br>
+            <!-- contact form -->
+            <form name="form-section" method="POST" onsubmit="return formValidation()" netlify>
+              <div class="form-group">
+                <span id="error-name" style="color: red;"></span>
+                <input type="text" class="form-control" placeholder="Name" name="name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" name="email" required>
+              </div>
+              <div class="form-group">
+                <span id="error-subject" style="color: red;"></span>
+                <input type="text" class="form-control" placeholder="Subject" name="subject" required>
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" placeholder="Phone" name="phone" required>
+              </div>
+              <div class="form-group">
+                <span id="error-msg" style="color: red;"></span>
+                <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" class="btn btn-primary btn-send-message" value="Send Message">
+              </div>
+            </form>
+
           </div>
         </div>
+        <!-- end of contact section -->
       </div>
       <!-- end of accordion -->
     </div>
-      <div class="row">
-        <div class="col-12 footer">
-
-        </div>
-      </div>
-
     <!-- end of main section -->
   </div>
+  <footer>
+    <div class="container mb-5 mt-5 pb-5">
+      <div class="pt-4">
+          <h2 style="font-weight: bold; color: #146396; font-family: 'Fredoka One', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" class="mb-4 offset-sm-3 offset-lg-4">Code With Abdul-matin</h2>
+      </div>
+      <div class="mt-4 offset-3 offset-md-5">
+          <a href="contact.html" target="_blank"><i class="fab fa-instagram footer-icon mr-3"></i></a>
+          <a href="contact.html" target="_blank"><i class="fab fa-facebook footer-icon mr-3"></i></a>
+          <a href="https://wa.me/qr/WFP4GAAE43O6I1" target="_blank"><i class="fab fa-whatsapp footer-icon mr-3"></i></a>
+          <a href="mailto:madeayo04@gmail.com?subject=Code%20With%20Abdul-matin" target="_blank"><i class="fas fa-mail-bulk footer-icon"></i></a>
+      </div>
+    </div>
+    
+  </footer>
   
   <!-- javascript -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
