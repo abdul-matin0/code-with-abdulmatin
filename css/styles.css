@@ -1,6 +1,7 @@
 body{
     padding: 0;
     margin: 0;
+    background-color: #fafafa;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -23,6 +24,22 @@ body{
       
 }
 
+.card-one{
+    background-color: #d4cbe5;
+}
+
+.card-two{
+    background-color: #7adccf;
+}
+
+.card-three{
+    background-color: #f7c59f;
+}
+
+.card-four{
+    background-color: #b8d7f5;
+}
+
 .card-header{
     height: 170px;
 }
@@ -32,15 +49,29 @@ body{
     font-size: xx-large;
     letter-spacing: 1px;
     margin-top: 50px;
-    font-family: 'Fredoka One', cursive;
+    font-family: 'Fredoka One', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .card-icon{
-    color: #dc3545;
+    color: #121212;
     float: right;
     font-size: xx-large;
+}
+
+.card-link p{
+    color: #121212;
 }
 
 .footer{
     border-top: 2px solid #dc3545;
 }
+
+.footer-icon{
+    font-size: xx-large;
+    color: #121212;
+}
+/* #d4cbe5
+   #7adccf
+   #f7c59f
+   #b8d7f5
+   */
