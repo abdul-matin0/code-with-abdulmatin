@@ -24,7 +24,7 @@ body{
       
 }
 
-/* expand link to span across card */
+/* expand link to span across card*/
 .card-link{
     display: block;
     height: 100%;
