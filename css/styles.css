@@ -62,13 +62,31 @@ body{
     color: #121212;
 }
 
-.footer{
-    border-top: 2px solid #dc3545;
-}
-
 .footer-icon{
     font-size: xx-large;
     color: #121212;
+}
+
+.footer-nav{
+    font-size: large;
+    color: #121212;
+}
+
+.fa-instagram{
+    color: #E50914;
+}
+.fa-facebook{
+    color: #3B5998;
+}
+.fa-twitter{
+    color: #55ACEE;
+}
+.fa-mail-bulk{
+    color: #EA4335;
+}
+
+.fa-whatsapp, .fa-whatsapp-square{
+    color: #34A853;
 }
 /* #d4cbe5
    #7adccf
