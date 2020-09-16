@@ -24,6 +24,12 @@ body{
       
 }
 
+/* expand link to span across card */
+.card-link{
+    display: block;
+    height: 100%;
+}
+
 .card-one{
     background-color: #d4cbe5;
 }
