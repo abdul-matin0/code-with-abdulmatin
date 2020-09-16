@@ -1,8 +1,14 @@
 <!DOCTYPE html>
+<!-- created by Adebayo Abdul-matin
+    madeayo04@gmail.com
+    copyright@2020
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="image/logo.png" type="image/png">
     <title>Code With Abdul-matin</title>
     <!-- bootstrap css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -46,6 +52,54 @@
             return false;
           }
         }
+
+        var i = 0;
+        var txt = "Learn Web Development, Mobile Development and become a professional ";
+        var speed = 50;
+
+        function typeWriter(){
+            
+            if (i < txt.length) {
+                document.getElementById("caption").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+          }
+
+        // load function when browser loads
+        window.onload = function(){
+            typeWriter();
+        } 
+
+        // Set the date we're counting down to
+        var countDownDate = new Date("Sep 26, 2020 10:15:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+          // Get today's date and time
+          var now = new Date().getTime();
+
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          // Display the result in the element with id="demo"
+          document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+          + minutes + "m " + seconds + "s ";
+
+          // If the count down is finished, write some text
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+
     </script>
     
 </head>
@@ -55,7 +109,7 @@
   <div class="container mt-3 mb-5" >
     <div class="card bg-danger text-white notification">
       <div class="card-body text-center notification-text">
-        <i class="fas fa-calendar-check mr-3"></i> Free upcoming webinar <a href="#calendar" class="btn btn-light ml-2 ml-md-5 mt-2 mt-sm-0" role="button"> View Details <i class="fas fa-arrow-right ml-sm-3 ml-2"></i></a>
+        <i class="fas fa-calendar-check mr-3"></i> Free upcoming webinar on <span id="timer" class="ml-3"></span> <a href="#calendar" class="btn btn-light pl-4 ml-4 ml-md-5 mt-2 mt-sm-0" role="button"> View Details <i class="fas fa-arrow-right ml-sm-3 ml-2"></i></a>
       </div>
     </div>
   </div>
@@ -65,7 +119,7 @@
   <div class="container ">
     <!-- heading -->
     <h2 style="font-weight: bold; color: #146396; font-family: 'Fredoka One', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" class="mb-4">Code With Abdul-matin</h2>
-    <p class="mb-5">Learn From Experts: stuffs content content Learn From Experts: stuffs content content</p>
+    <p class="mb-5" id="caption"></p>
 
     <!-- content section -->
     <div id="accordion">
@@ -77,12 +131,11 @@
             <b class="header-color mt-3 ml-1 ml-sm-3"> Courses<i class="fas fa-angle-down ml-3"></i></b>
             <i class="fas fa-book card-icon mr-3 mr-sm-5 mt-2"></i>
 
-            <p class="mt-4 ml-1 ml-sm-3">View list of available courses</p>
           </a>
         </div>
         <div id="collapseOne" class="collapse show">
           <div class="card-body">
-            <p>Combine .table-dark and .table-striped to create a dark, striped table:</p>
+            <p>Overview of the course outline and duration</p>
             <!-- table course -->            
               <table class="table table-dark table-striped table-responsive-sm">
                 <thead>
@@ -96,22 +149,27 @@
                   <tr>
                     <td>Web Design</td>
                     <td>HTML, CSS, Javascript, Bootstrap Framework</td>
-                    <td>2 Months</td>
+                    <td>2 Months (1hr, 3 days per week )</td>
                   </tr>
                   <tr>
                     <td>Web Development</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
+                    <td>HTML, CSS, Javascript, MySql, PHP</td>
+                    <td>3 Months (1hr 30 mins, 3 days per week )</td>
                   </tr>
                   <tr>
                     <td>Android Development</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
+                    <td>Java, Android Studio</td>
+                    <td>3 Months (1hr 30 mins, 3 days per week )</td>
                   </tr>
                   <tr>
-                    <td>Java Programming</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
+                    <td>Building mobile apps with Flutter </td>
+                    <td>Dart, Android Studio</td>
+                    <td>3 Months (1hr 30 mins, 3 days per week )</td>
+                  </tr>
+                  <tr>
+                    <td>Linux OS</td>
+                    <td>Linux OS</td>
+                    <td>2 Months</td>
                   </tr>
                 </tbody>
               </table>
@@ -124,12 +182,42 @@
           <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
             <b class="header-color mt-3 ml-1 ml-sm-3">Pricing<i class="fas fa-angle-down ml-3"></i></b>
             <i class="fas fa-bezier-curve card-icon mr-3 mr-sm-5 mt-2"></i>
-            <p class="mt-4 ml-1 ml-sm-3">View list of available courses</p>
+
         </a>
         </div>
         <div id="collapseTwo" class="collapse show">
           <div class="card-body">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              <!-- table course -->            
+              <table class="table table-dark table-striped table-responsive-sm">
+                <thead>
+                  <tr>
+                    <th>Course</th>
+                    <th>Prices</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Web Design</td>
+                    <td>N25,000</td>
+                  </tr>
+                  <tr>
+                    <td>Web Development</td>
+                    <td>N35,000</td>
+                  </tr>
+                  <tr>
+                    <td>Android Development</td>
+                    <td>N40,000</td>
+                  </tr>
+                  <tr>
+                    <td>Building mobile apps with Flutter </td>
+                    <td>N40,000</td>
+                  </tr>
+                  <tr>
+                    <td>Linux OS</td>
+                    <td>N50,000</td>
+                  </tr>
+                </tbody>
+              </table>  
           </div>
         </div>
       </div>
@@ -143,7 +231,27 @@
         </div>
         <div id="collapseThree" class="collapse show">
           <div class="card-body">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <!-- first calendar details -->
+            <div>
+              <b>Free upcoming webinar on Saturday 20th September, 2020</b><br>
+              <p> <b>Category: </b>Web Development <br>
+                  <b>Topic: </b>Building a standard Contact form <br>
+                  <b>Time: </b>10:15am to 10:55am prompt<br>
+                  <b>Location: </b>Zoom Platform <br>
+                  <b>Link: </b> link here <br> 
+              </p> 
+            </div>
+
+             <!-- second calendar details -->
+             <div>
+              <b>Free upcoming webinar on Saturday 20th September, 2020</b><br>
+              <p> <b>Category: </b>Android Development <br>
+                  <b>Topic: </b>Let's build a Weather App <br>
+                  <b>Location: </b>Zoom Platform <br>
+                  <b>Link: </b> link here <br> 
+              </p> 
+            </div>
+             
           </div>
         </div>
       </div>
@@ -153,6 +261,7 @@
           <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
             <b class="header-color mt-3 ml-1 ml-sm-3">Contact<i class="fas fa-angle-down ml-3"></i></b>
             <i class="fas fa-phone card-icon mr-3 mr-sm-5 mt-2"></i>
+            
         </a>
         </div>
         <div id="collapseFour" class="collapse show">
@@ -194,14 +303,34 @@
   <footer>
     <div class="container mb-5 mt-5 pb-5">
       <div class="pt-4">
+        <!-- header text -->
           <h2 style="font-weight: bold; color: #146396; font-family: 'Fredoka One', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" class="mb-4 offset-sm-3 offset-lg-4">Code With Abdul-matin</h2>
       </div>
+      <!-- social media links -->
       <div class="mt-4 offset-3 offset-md-5">
           <a href="contact.html" target="_blank"><i class="fab fa-instagram footer-icon mr-3"></i></a>
           <a href="contact.html" target="_blank"><i class="fab fa-facebook footer-icon mr-3"></i></a>
-          <a href="https://wa.me/qr/WFP4GAAE43O6I1" target="_blank"><i class="fab fa-whatsapp footer-icon mr-3"></i></a>
+          <a href="contact.html" target="_blank"><i class="fab fa-twitter footer-icon mr-3"></i></a>
           <a href="mailto:madeayo04@gmail.com?subject=Code%20With%20Abdul-matin" target="_blank"><i class="fas fa-mail-bulk footer-icon"></i></a>
+          <br>
       </div>
+      <!-- relevant info / link -->
+      <div class="row mt-3">
+        <div class="col-sm-7">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a href="https://wa.me/qr/WFP4GAAE43O6I1" target="_blank" class="nav-link ml-3 ml-lg-5"><span class="footer-nav mr-2">Text me on Whatsapp </span><i class="fab fa-whatsapp footer-icon"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://wa.me/qr/WFP4GAAE43O6I1" target="_blank" class="nav-link ml-3 ml-lg-5"><span class="footer-nav mr-2">Join our WhatsApp group </span><i class="fab fa-whatsapp-square footer-icon"></i></a>
+                </li><li class="nav-item">
+                  <span class="nav-link ml-3 ml-lg-5 mt-3 " style="color: rgb(112, 110, 110)">Copyright @ 2020 <b>Code With Abdul-matin</b>.</span>
+                </li>
+            </ul>
+        </div>
+      </div>        
+    </div>
+
     </div>
     
   </footer>
