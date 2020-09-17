@@ -16,6 +16,11 @@ body{
 .notification-text a{
     color: #dc3545;
 }
+
+.link_meet{
+    color: #121212;
+    text-decoration: underline;
+}
 .card{
     border-radius: 15px;
     /* animation-delay:3s; */
